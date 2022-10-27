@@ -115,6 +115,23 @@ Preprocess the raw data for dialog and summary
 ```
 bash ./scripts/preprocess_data.sh
 ```
+## Train
+Finetune pre-trained model
+```
+bash ./scripts/train_dialog.sh
+bash ./scripts/train_summary.sh
+bash ./scripts/train_transformer.sh
+bash ./scripts/train_risk_classify.sh
+bash ./scripts/train_topic_classify.sh
+```
+## Test
+```
+bash ./scripts/test_transformer.sh
+```
+## Test by Prompt
+```
+bash ./scripts/test_dialog_with_prompt.sh
+```
 
 ## Reference
 If you use any source codes or datasets included in this repository in your work, please cite the corresponding paper. The bibtex are listed below (will be updated after formal public):

@@ -1,0 +1,7 @@
+jieba==0.42.1
+nltk==3.5
+numpy==1.21.4
+rouge==1.0.1
+scikit_learn==1.0.1
+torch==1.8.1+cu111
+transformers==4.11.1

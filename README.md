@@ -65,7 +65,56 @@ In our experiments, we jointly optimize the topic prediction model and the respo
 |         |        |  BART   |   0.70±.05   |   0.66±.04   |  0.65 ±.03   |
 |         |        | **CPT** | **0.76±.02** | **0.68±.02** | **0.70±.02** |
 
-
+## Requirements
+The required python packages is listed in "requirements.txt". You can install them by
+```
+pip install -i requirements.txt
+```
+or 
+```
+conda install --file requirements.txt
+```
+## Raw Data Format
+```
+{
+  "log":[ #dialog history
+    {
+      "text": "医生你好",
+      "action": null,
+      "speaker": "patient",
+      "topic": []
+    },
+    {
+        "text": "你好",
+        "action": "其它", #topic
+        "speaker": "doctor", 
+        "topic": []
+    },
+  ],
+  "portrait": #corresponding portrait of the dialog
+  {
+    "drisk": 3, #depression severity [0-5]
+    "srisk": 2, #suicide severity [0-4]
+    "age": "18",
+    "gender": "男",
+    "martial_status": "未婚",
+    "occupation": "无职业",
+    "symptoms": "决断困难；睡眠",
+    "reason": ""
+  },
+  "record": #medical record of the dialog
+  {
+    "drisk": 2,
+    "srisk": 2,
+    "summary": "来访者近两周烦躁，有不合理的自罪想法，有自杀观念和行为。"
+  }
+}
+```
+## Data preprocess
+Preprocess the raw data for dialog and summary
+```
+bash ./scripts/preprocess_data.sh
+```
 
 ## Reference
 If you use any source codes or datasets included in this repository in your work, please cite the corresponding paper. The bibtex are listed below (will be updated after formal public):

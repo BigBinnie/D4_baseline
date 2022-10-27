@@ -117,6 +117,7 @@ bash ./scripts/preprocess_data.sh
 ```
 ## Train
 Finetune pre-trained model
+Device: NVIDIA A10(24G) x 4
 ```
 bash ./scripts/train_dialog.sh
 bash ./scripts/train_summary.sh

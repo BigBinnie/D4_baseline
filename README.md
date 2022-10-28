@@ -105,7 +105,7 @@ conda install --file requirements.txt
   "record": #medical record of the dialog
   {
     "drisk": 2, #depression severity [0-3]
-    "srisk": 2, #depression severity [0-3]
+    "srisk": 2, #suicide severity [0-3]
     "summary": "来访者近两周烦躁，有不合理的自罪想法，有自杀观念和行为。"
   }
 }]
